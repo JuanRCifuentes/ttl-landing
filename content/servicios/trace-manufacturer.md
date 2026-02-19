@@ -1,8 +1,8 @@
 ---
 name: Trace Manufacturer
 description: Un DPP ideal para fabricantes de telas e insumos que quieran demostrar la calidad de sus productos y procesos. Ideal para cumplir con las normativas exigidas para exportar a la unión europea.
-monthlyPrice: "$99"
-annualPrice: "$999"
+monthlyPrice: "$"
+annualPrice: "$"
 cta: Contactar ventas
 linkText: "Hablar con un asesor"
 linkHref: "/aliados"
