@@ -1,8 +1,8 @@
 ---
 name: Trace Export
 description: Un DPP ideal para las marcas que quieren mostrar la historia detrás de sus productos y cumplir con las normativas exigidas para exportar a la unión europea.
-monthlyPrice: "$49"
-annualPrice: "$499"
+monthlyPrice: "$"
+annualPrice: "$"
 cta: Más información
 linkText: "Ver demo"
 linkHref: "https://dpp.textiletracelatam.com/?id=69"
