@@ -1,8 +1,8 @@
 ---
 name: Trace Local
 description: Un DPP ideal para las marcas que quieren mostrar la historia detrás de sus productos. Incluyendo la posibilidad de mejora a Trace Export cuando quieran exportar.
-monthlyPrice: "$29"
-annualPrice: "$299"
+monthlyPrice: ""
+annualPrice: ""
 cta: Más información
 linkText: "Ver demo"
 linkHref: "https://dpp.textiletracelatam.com/?id=69"
