@@ -57,7 +57,7 @@ const materialSymbolAliases = {
             {contactCards.map((card) => (
               <div class="flex gap-x-4">
                 <div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary-50 dark:bg-primary-500/10">
-                  <span class="material-symbols-outlined text-primary-600 dark:text-primary-400 text-[20px] leading-none">
+                  <span aria-hidden="true" class="material-symbols-outlined text-primary-600 dark:text-primary-400 text-[20px] leading-none">
                     {materialSymbolAliases[card.data.icon as keyof typeof materialSymbolAliases] ?? card.data.icon}
                   </span>
                 </div>
@@ -113,7 +113,3 @@ const materialSymbolAliases = {
     </div>
   </div>
 </Layout>
-
-<style is:global>
-  @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0");
-</style>
