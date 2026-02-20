@@ -165,6 +165,21 @@ const nosotrosTeam = defineCollection({
   }),
 });
 
+
+const nosotrosCta = defineCollection({
+  loader: glob({ pattern: "cta.md", base: "content/nosotros" }),
+  schema: z.object({
+    heading: z.string(),
+    description: z.string(),
+    primaryText: z.string(),
+    primaryHref: z.string().default("/aliados"),
+    primaryColor: buttonColor,
+    ghostText: z.string(),
+    ghostHref: z.string().default("/contactanos"),
+    ghostColor: buttonColor.default("neutral"),
+  }),
+});
+
 const empleoHero = defineCollection({
   loader: glob({ pattern: "hero.md", base: "content/empleo" }),
   schema: z.object({
@@ -253,6 +268,18 @@ const aliadosCta = defineCollection({
     ghostText: z.string(),
     ghostHref: z.string().default("/nosotros"),
     ghostColor: buttonColor.default("neutral"),
+  }),
+});
+
+
+const contactanosHero = defineCollection({
+  loader: glob({ pattern: "hero.md", base: "content/contactanos" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    emailLabel: z.string().default("Correo electrónico"),
+    locationLabel: z.string().default("Ubicación"),
+    socialsLabel: z.string().default("Síguenos"),
   }),
 });
 
@@ -390,4 +417,4 @@ const servicios = defineCollection({
   }),
 });
 
-export const collections = { homeHero, homeTrust, homeFeatures, homeHowItWorks, homeMission, homeBlog, homeCta, nosotrosHero, nosotrosMission, nosotrosParallax, nosotrosTeam, empleoHero, empleoWhyJoin, empleoValuesIntro, empleoCta, aliadosHero, aliadosForm, aliadosCta, contactanosCta, socials, values, team, blog, aliados, legal, soporte, guias, normativas, servicios };
+export const collections = { homeHero, homeTrust, homeFeatures, homeHowItWorks, homeMission, homeBlog, homeCta, nosotrosHero, nosotrosMission, nosotrosParallax, nosotrosTeam, nosotrosCta, empleoHero, empleoWhyJoin, empleoValuesIntro, empleoCta, aliadosHero, aliadosForm, aliadosCta, contactanosHero, contactanosCta, socials, values, team, blog, aliados, legal, soporte, guias, normativas, servicios };
