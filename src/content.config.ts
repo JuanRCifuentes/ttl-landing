@@ -2,6 +2,7 @@ import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
 const buttonColor = z.enum(["primary", "secondary", "neutral"]).default("primary");
+const contactCardIcon = z.enum(["mail", "location", "phone", "link", "clock", "building"]).default("mail");
 
 const homeHero = defineCollection({
   loader: glob({ pattern: "hero.md", base: "content/home" }),
@@ -165,6 +166,21 @@ const nosotrosTeam = defineCollection({
   }),
 });
 
+const nosotrosContact = defineCollection({
+  loader: glob({ pattern: "contact.md", base: "content/nosotros" }),
+  schema: z.object({
+    heading: z.string(),
+    description: z.string(),
+    dividerText: z.string().default("o encuéntranos en"),
+    primaryText: z.string(),
+    primaryHref: z.string().default("/aliados"),
+    primaryColor: buttonColor,
+    ghostText: z.string().optional(),
+    ghostHref: z.string().default("/contactanos"),
+    ghostColor: buttonColor.default("neutral"),
+  }),
+});
+
 const empleoHero = defineCollection({
   loader: glob({ pattern: "hero.md", base: "content/empleo" }),
   schema: z.object({
@@ -201,7 +217,7 @@ const empleoCta = defineCollection({
     heading: z.string(),
     description: z.string(),
     primaryText: z.string(),
-    primaryHref: z.string().default("mailto:info@textiletrace.lat"),
+    primaryHref: z.string().default("mailto:contacto@textiletracelatam.com"),
     primaryColor: buttonColor,
     ghostText: z.string(),
     ghostHref: z.string().default("/nosotros"),
@@ -248,7 +264,7 @@ const aliadosCta = defineCollection({
     heading: z.string(),
     description: z.string(),
     primaryText: z.string(),
-    primaryHref: z.string().default("mailto:info@textiletrace.lat"),
+    primaryHref: z.string().default("mailto:contacto@textiletracelatam.com"),
     primaryColor: buttonColor,
     ghostText: z.string(),
     ghostHref: z.string().default("/nosotros"),
@@ -267,6 +283,32 @@ const contactanosCta = defineCollection({
     ghostText: z.string(),
     ghostHref: z.string().default("/soporte/documentacion"),
     ghostColor: buttonColor.default("neutral"),
+  }),
+});
+
+const contactanosHero = defineCollection({
+  loader: glob({ pattern: "hero.md", base: "content/contactanos" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+  }),
+});
+
+const contactanosInfo = defineCollection({
+  loader: glob({ pattern: "info.md", base: "content/contactanos" }),
+  schema: z.object({
+    socialsLabel: z.string().default("Síguenos"),
+  }),
+});
+
+const contactanosCards = defineCollection({
+  loader: glob({ pattern: "cards/*.md", base: "content/contactanos" }),
+  schema: z.object({
+    title: z.string(),
+    value: z.string(),
+    href: z.string().optional(),
+    icon: contactCardIcon,
+    order: z.number().default(100),
   }),
 });
 
@@ -390,4 +432,4 @@ const servicios = defineCollection({
   }),
 });
 
-export const collections = { homeHero, homeTrust, homeFeatures, homeHowItWorks, homeMission, homeBlog, homeCta, nosotrosHero, nosotrosMission, nosotrosParallax, nosotrosTeam, empleoHero, empleoWhyJoin, empleoValuesIntro, empleoCta, aliadosHero, aliadosForm, aliadosCta, contactanosCta, socials, values, team, blog, aliados, legal, soporte, guias, normativas, servicios };
+export const collections = { homeHero, homeTrust, homeFeatures, homeHowItWorks, homeMission, homeBlog, homeCta, nosotrosHero, nosotrosMission, nosotrosParallax, nosotrosTeam, nosotrosContact, empleoHero, empleoWhyJoin, empleoValuesIntro, empleoCta, aliadosHero, aliadosForm, aliadosCta, contactanosCta, contactanosHero, contactanosInfo, contactanosCards, socials, values, team, blog, aliados, legal, soporte, guias, normativas, servicios };
