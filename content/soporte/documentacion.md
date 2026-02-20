@@ -25,4 +25,4 @@ Nuestra plataforma ofrece una API REST para integrar la trazabilidad directament
 
 ## ¿Necesitas ayuda?
 
-Si tienes dudas, no dudes en [enviar un ticket](/soporte/ticket) o escribirnos a **soporte@textiletrace.lat**.
+Si tienes dudas, no dudes en [enviar un ticket](/soporte/ticket) o escribirnos a **soporte@textiletracelatam.com**.

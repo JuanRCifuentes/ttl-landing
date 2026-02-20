@@ -5,7 +5,7 @@ subtitle: Reporta un problema o solicita asistencia técnica a nuestro equipo.
 
 ## ¿Cómo enviar un ticket?
 
-Para reportar un problema o solicitar asistencia, envíanos un correo electrónico a **soporte@textiletrace.lat** con la siguiente información:
+Para reportar un problema o solicitar asistencia, envíanos un correo electrónico a **soporte@textiletracelatam.com** con la siguiente información:
 
 ### Información requerida
 
@@ -20,4 +20,4 @@ Nuestro equipo de soporte se compromete a responder dentro de las próximas 48 h
 
 ## Canales alternativos
 
-También puedes contactarnos a través de nuestras redes sociales o escribirnos directamente a **info@textiletrace.lat**.
+También puedes contactarnos a través de nuestras redes sociales o escribirnos directamente a **contacto@textiletracelatam.com**.
